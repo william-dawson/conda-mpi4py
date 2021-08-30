@@ -8,9 +8,9 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v2
       - name: build
         shell: bash -l {0}
-        run:
-          sudo apt-get install openmpi-bin libopenmpi-dev |
-          conda activate |
+        run: |
+          sudo apt-get install openmpi-bin libopenmpi-dev
+          conda activate
           conda install -c conda-forge pip
           pip install mpi4py
 
