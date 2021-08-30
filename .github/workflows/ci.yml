@@ -1,0 +1,13 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: conda-incubator/setup-miniconda@v2
+      - name: build
+        sudo apt-get install openmpi-bin libopenmpi-dev |
+        conda activate |
+	pip install mpi4py
+
