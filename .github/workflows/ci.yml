@@ -15,4 +15,5 @@ jobs:
           conda activate
           conda install -c conda-forge pip
           pip install mpi4py
+          python main.py
 
